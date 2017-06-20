@@ -8,8 +8,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use pg as the database for Active Record
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -32,6 +32,20 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Gemas instaladas
+# Devise para controlar las sesiones
+gem 'devise'
+# Bootstrap para el diseño base
+gem 'sprockets-rails'
+gem 'bootstrap', github: 'twbs/bootstrap-rubygem'
+# Rails 5.1 no trae jQuery, debe instalarse
+gem 'jquery-rails'
+# Búsqueda en la DB
+gem "pg_search"
+# Will Paginate
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
