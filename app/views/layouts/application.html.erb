@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jpm</title>
-    <%= csrf_meta_tags %>
-
+    <title>[local] 💼 Portable Journalism</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# Solución parche mientras arreglan BS4a6: usar versión CDN %>
+    <%# <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-md navbar-light bg-faded">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarPJ" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarPJ">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link disabled" href="#">Quiénes Somos</a>
+                <a class="nav-item nav-link disabled" href="#">¿Cómo funciona?</a>
+                <a href="#" class="btn btn-outline-success mx-1" role="button">Ingresa</a>
+                <a href="#" class="btn btn-outline-success mx-1" role="button">Regístrate</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" style="min-height: 60vh;">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="bg-faded">
+            <div class="row">
+              <div class="col">
+                Espacio para footer.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

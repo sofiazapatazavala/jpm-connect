@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Bootstrap para el diseño base
 gem 'sprockets-rails'
-gem 'bootstrap', github: 'twbs/bootstrap-rubygem'
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 # Rails 5.1 no trae jQuery, debe instalarse
 gem 'jquery-rails'
 # Búsqueda en la DB
