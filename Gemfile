@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # Gemas instaladas
 # Devise para controlar las sesiones
 gem 'devise'
+# Cancancan para controlar los permisos
+gem 'cancancan', '~> 1.10'
 # Bootstrap para el diseño base
 gem 'sprockets-rails'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
