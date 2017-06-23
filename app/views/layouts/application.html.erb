@@ -23,8 +23,11 @@
               <div class="navbar-nav">
                 <a class="nav-item nav-link disabled" href="#">Quiénes Somos</a>
                 <a class="nav-item nav-link disabled" href="#">¿Cómo funciona?</a>
-                <a href="#" class="btn btn-outline-success mx-1" role="button">Ingresa</a>
-                <a href="#" class="btn btn-outline-success mx-1" role="button">Regístrate</a>
+                <% if user_signed_in? %>
+                  <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete, class: "btn btn-outline-danger", role: "button" %>
+                <% else %>
+                <%= link_to 'Ingresa', new_user_session_path, class: "btn btn-outline-success", role: "button" %>
+                <% end %>
               </div>
             </div>
           </nav>
@@ -32,13 +35,6 @@
       </div>
       <div class="row">
         <div class="col">
-          <% if admin_signed_in? %>
-            ¡Hola, admin!
-          <% elsif journalist_signed_in? %>
-            ¡Hola, periodista!
-          <% elsif medium_signed_in? %>
-            ¡Hola, medio!
-          <% end %>
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
         </div>

@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
+  resources :stories
   devise_for :users
-  get 'welcome/admin'
-
-  get 'welcome/journalist'
-
-  get 'welcome/media'
-
 
   get 'home/index'
+  get 'home/about'
+  get 'home/howitworks'
 
   root to: "home#index"
 
