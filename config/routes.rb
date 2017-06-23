@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  resources :applications
-  resources :jobs
-  devise_for :journalists
-  devise_for :media
-  devise_for :admins
+  get 'welcome/admin'
+
+  get 'welcome/journalist'
+
+  get 'welcome/media'
+
+
   get 'home/index'
 
   root to: "home#index"

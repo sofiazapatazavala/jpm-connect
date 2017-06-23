@@ -32,6 +32,13 @@
       </div>
       <div class="row">
         <div class="col">
+          <% if admin_signed_in? %>
+            ¡Hola, admin!
+          <% elsif journalist_signed_in? %>
+            ¡Hola, periodista!
+          <% elsif medium_signed_in? %>
+            ¡Hola, medio!
+          <% end %>
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
         </div>
