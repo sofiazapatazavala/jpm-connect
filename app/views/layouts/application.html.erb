@@ -21,8 +21,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarPJ">
               <div class="navbar-nav">
-                <a class="nav-item nav-link disabled" href="#">Quiénes Somos</a>
-                <a class="nav-item nav-link disabled" href="#">¿Cómo funciona?</a>
+                <%= link_to 'Portada', root_path, class: "nav-item nav-link" %>
+                <%= link_to 'Quiénes somos', home_about_path, class: "nav-item nav-link" %>
+                <%= link_to '¿Cómo funciona?', home_howitworks_path, class: "nav-item nav-link" %>
                 <% if user_signed_in? %>
                   <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete, class: "btn btn-outline-danger", role: "button" %>
                 <% else %>
@@ -35,8 +36,8 @@
       </div>
       <div class="row">
         <div class="col">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+          <span class="notice"><%= notice %></span>
+          <span class="alert"><%= alert %></span>
         </div>
       </div>
       <div class="row">
