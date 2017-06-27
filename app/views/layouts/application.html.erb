@@ -5,10 +5,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %> <%# NO BORRAR JAMÁS %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%# Solución parche mientras arreglan BS4a6: usar versión CDN %>
-    <%# <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> %>
   </head>
 
   <body>
@@ -25,6 +24,7 @@
                 <%= link_to 'Quiénes somos', home_about_path, class: "nav-item nav-link" %>
                 <%= link_to '¿Cómo funciona?', home_howitworks_path, class: "nav-item nav-link" %>
                 <% if user_signed_in? %>
+                  <%= link_to 'Editar perfil', edit_user_registration_path, class: "btn btn-outline-warning", role: "button" %>
                   <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete, class: "btn btn-outline-danger", role: "button" %>
                 <% else %>
                 <%= link_to 'Ingresa', new_user_session_path, class: "btn btn-outline-success", role: "button" %>

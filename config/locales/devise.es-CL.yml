@@ -25,6 +25,13 @@ es-CL:
         unconfirmed_email: Email no confirmado
         unlock_token: Código de desbloqueo
         updated_at: Fecha de actualización
+        name: Nombre
+        city: Ciudad
+        country: País
+        startdate: "Fecha de graduación"
+        nationality: "Nacionalidad"
+        currentjob: "Trabajo actual"
+        description: "Sobre ti"
     models:
       user: Usuario
   devise:
